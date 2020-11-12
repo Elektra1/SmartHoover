@@ -1,2 +1,4 @@
-package PACKAGE_NAME;public class SalesMan {
+package org.hbrs.ia.contract;
+
+public class SalesMan {
 }

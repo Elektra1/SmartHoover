@@ -1,2 +1,4 @@
-package org.hbrs.ia.contract;public class EvaluationRecord {
+package org.hbrs.ia.contract;
+
+public class EvaluationRecord {
 }

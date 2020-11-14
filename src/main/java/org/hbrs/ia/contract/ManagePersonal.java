@@ -6,7 +6,7 @@ public interface ManagePersonal {
 
     public void createSalesMan( SalesMan record );
 
-    public void addPerformanceReord( EvaluationRecord record , int sid );
+    public void addPerformanceRecord( EvaluationRecord record , int sid );
 
     public SalesMan readSalesMan( int sid );
 

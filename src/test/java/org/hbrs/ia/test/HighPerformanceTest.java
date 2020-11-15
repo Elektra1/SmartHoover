@@ -7,7 +7,7 @@ import com.mongodb.client.MongoCollection;
 
 import org.bson.Document;
 
-import org.hbrs.ia.contract.SalesMan;
+import org.hbrs.ia.model.SalesMan;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,6 +1,8 @@
-package org.hbrs.ia.contract;
+package org.hbrs.ia.model;
 
 import org.bson.Document;
+
+import java.util.List;
 
 public class SalesMan {
 
@@ -37,6 +39,8 @@ public class SalesMan {
     public void setId(int id) {
         this.id = id;
     }
+
+    private List<PerformanceRecord> performanceRecords;
 
     public Document toDocument() {
         Document document = new Document();

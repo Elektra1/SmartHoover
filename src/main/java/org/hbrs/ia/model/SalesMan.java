@@ -16,6 +16,10 @@ public class SalesMan {
         this.id = id;
     }
 
+    public SalesMan() {
+
+    }
+
     public String getFirstname() {
         return firstname;
     }
@@ -48,5 +52,9 @@ public class SalesMan {
         document.append("lastname", this.lastname);
         document.append("id", this.id);
         return document;
+    }
+
+    public String toString() {
+        return "Id: " + this.id + " Vorname: " + this.firstname + " Nachname: " + this.lastname;
     }
 }

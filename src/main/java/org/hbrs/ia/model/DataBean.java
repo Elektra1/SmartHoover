@@ -23,5 +23,4 @@ public class DataBean {
     public Stage getPrimaryStage() {
         return primaryStage;
     }
-
 }

@@ -6,19 +6,36 @@ import java.util.Date;
 
 public class PerformanceRecord {
 
-    SalesMan salesMan;
+    int salesManId;
     String description;
-    int targetvalue;
-    int actualvalue;
-    Date year;
+    int totalsales;
+    int bonus;
+    String ranking;
+    int socialranking;
+    String year;          //ToDo: Date
     int id;
 
-    public SalesMan getSalesMan() {
-        return salesMan;
+    public PerformanceRecord() {
+
     }
 
-    public void setSalesMan(SalesMan salesMan) {
-        this.salesMan = salesMan;
+    public PerformanceRecord(int salesManId, String description, int totalsales, int bonus, String ranking, int socialranking, String year, int id) {
+        this.salesManId = salesManId;
+        this.description = description;
+        this.totalsales = totalsales;
+        this.bonus = bonus;
+        this.ranking = ranking;
+        this.socialranking = socialranking;
+        this.year = year;
+        this.id = id;
+    }
+
+    public int getSalesMan() {
+        return salesManId;
+    }
+
+    public void setSalesMan(int alesManId) {
+        this.salesManId = salesManId;
     }
 
     public String getDescription() {
@@ -29,38 +46,69 @@ public class PerformanceRecord {
         this.description = description;
     }
 
-    public int getTargetvalue() {
-        return targetvalue;
+    public int getTotalsales() {
+        return totalsales;
     }
 
-    public void setTargetvalue(int targetvalue) {
-        this.targetvalue = targetvalue;
+    public void setTotalsales(int totalsales) {
+        this.totalsales = totalsales;
     }
 
-    public int getActualvalue() {
-        return actualvalue;
+    public int getBonus() {
+        return bonus;
     }
 
-    public void setActualvalue(int actualvalue) {
-        this.actualvalue = actualvalue;
+    public void setBonus(int bonus) {
+        this.bonus = bonus;
     }
 
-    public Date getYear() {
+    public String getRanking() {
+        return ranking;
+    }
+
+    public void setRanking(String ranking) {
+        this.ranking = ranking;
+    }
+
+    public int getSocialranking() {
+        return socialranking;
+    }
+
+    public void setSocialranking(int socialranking) {
+        this.socialranking = socialranking;
+    }
+
+    public String getYear() {
         return year;
     }
 
-    public void setYear(Date year) {
+    public void setYear(String year) {
         this.year = year;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public Document toDocument() {
         Document document = new Document();
-        document.append("salesman", this.salesMan);
+        document.append("salesmanId", this.salesManId);
         document.append("description", this.description);
-        document.append("targetvalue", this.targetvalue);
-        document.append("actualvalue", this.actualvalue);
+        document.append("totalsales", this.totalsales);
+        document.append("bonus", this.bonus);
+        document.append("ranking", this.ranking);
+        document.append("socialranking", this.socialranking);
         document.append("year", this.year);
         document.append("id", this.id);
         return document;
+    }
+
+    public String toString() {
+        return "Id: " + this.id + " SalesmanId: " + this.salesManId + " Description: " + this.description + " Totalsales: " + this.totalsales
+                + " Bonus: " + this.bonus + " Ranking: " + ranking + " Socialranking: " + socialranking + " Year: " + year;
     }
 }
